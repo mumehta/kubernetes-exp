@@ -6,18 +6,18 @@ Make sure that you have access to a Kubernetes cluster.
 ## Build a Docker image from existing Python source code and push it to Docker Hub. Replace DOCKER_HUB_USER with your Docker Hub username.
 ```
 cd Docker
-docker build . -t <DOCKER_HUB_USER>/web
-docker push <DOCKER_HUB_USER>/web
+docker build . -t munishmehta/web
+docker push munishmehta/web
 ```
 
 ## Launch the app with Docker Compose
 ```
-docker-compose up -d 
+docker-compose up -d
 ```
 
 ## Test the app
 ```
-curl localhost:5000
+curl localhost:3000
 ```
 
 ## Deploy the app to Kubernetes
@@ -47,12 +47,3 @@ kubectl describe svc web
 kubectl get nodes
 curl <NODE_IP>:<NODEPORT>
 ```
-
-
-
-
-
-
-
-
-
